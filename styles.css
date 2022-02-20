@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    font-family: 'Roboto';
+}
+
+.turn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    gap: 10px;
+    color: aliceblue;
+}
+
+#pre-words,
+#post-words {
+    font-size: 30px;
+}
+
+#playername {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+}
+
+.container {
+    display:grid;
+}
+
+.gameboard {
+    display:grid;
+    grid-area: 1 / -1;
+    align-content: center;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    border: 5px outset rgb(129, 129, 129);
+    outline: 10px outset rgb(77, 77, 77);
+    background-color: aliceblue;
+}
+
+#overlay {
+    display: none;
+    grid-area: 1 / -1;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    z-index: 1;
+}
+
+#square1,
+#square2,
+#square3,
+#square4,
+#square5,
+#square6,
+#square7,
+#square8,
+#square9 {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    width:200px;
+    height:200px; 
+    font-size: 180px;
+    font-family: 'Roboto';
+}
+
+#square1,
+#square2,
+#square3 {
+    border-top: 8px outset rgb(129, 129, 129);
+}
+
+#square1,
+#square4,
+#square7 {
+    border-left: 8px outset rgb(129, 129, 129);
+}
+
+#square7,
+#square8,
+#square9 {
+    border-bottom: 8px outset rgb(129, 129, 129);
+}
+
+#square3,
+#square6,
+#square9 {
+    border-right: 8px outset rgb(129, 129, 129);
+}
+
+#square4,
+#square5,
+#square6,
+#square7,
+#square8,
+#square9 {
+    border-top: 3px solid rgb(27, 27, 27);
+}
+
+#square2,
+#square3,
+#square5,
+#square6,
+#square8,
+#square9 {
+    border-left: 3px solid rgb(27, 27, 27);
+}
+
+#winner {
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-top: 10px;
+    color: aliceblue;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#playagain {
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 2px outset rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+
